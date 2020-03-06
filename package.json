@@ -1,0 +1,14 @@
+{
+  "name": "aaa",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "google-example": "gherkin-testcafe chrome **/*.ts examples/google.feature"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.5",
+    "gherkin-testcafe": "^2.5.0",
+    "testcafe": "^1.8.2",
+    "testcafe-browser-provider-browserstack": "^1.12.0"
+  }
+}
