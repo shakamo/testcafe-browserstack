@@ -9,6 +9,7 @@
     "stanby2": "gherkin-testcafe chrome features/**/*.ts features/top.feature -s pathPattern='${BROWSER}/screenshot-${FILE_INDEX}/actual.png'",
     "stanby3": "testcafe-blink-diff screenshots/name --compare base:actual --open --threshold 0.03",
     "stanbyxx": "gherkin-testcafe chrome features/**/*.ts features/top.feature --take-snapshot actual",
+    "remote": "gherkin-testcafe remote --qr-code features/**/*.ts features/top.feature ",
     "a": "testcafe-blink-diff --help"
   },
   "dependencies": {
