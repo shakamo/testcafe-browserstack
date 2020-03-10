@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "google-example": "gherkin-testcafe chrome **/*.ts examples/google.feature"
+    "google-example": "gherkin-testcafe chrome **/*.ts examples/google.feature",
+    "stanby": "gherkin-testcafe chrome features/**/*.ts features/top.feature -s pathPattern='${DATE}_${TIME}/${BROWSER}/screenshot-${FILE_INDEX}.png'",
+    "stanby1": "gherkin-testcafe chrome features/**/*.ts features/top.feature -s pathPattern='${BROWSER}/screenshot-${FILE_INDEX}/base.png'",
+    "stanby2": "gherkin-testcafe chrome features/**/*.ts features/top.feature -s pathPattern='${BROWSER}/screenshot-${FILE_INDEX}/actual.png'",
+    "stanby3": "testcafe-blink-diff screenshots/name --compare base:actual --open --threshold 0.03",
+    "stanbyxx": "gherkin-testcafe chrome features/**/*.ts features/top.feature --take-snapshot actual",
+    "a": "testcafe-blink-diff --help"
   },
   "dependencies": {
     "cucumber": "^6.0.5",
     "gherkin-testcafe": "^2.5.0",
     "testcafe": "^1.8.2",
     "testcafe-browser-provider-browserstack": "^1.12.0"
+  },
+  "devDependencies": {
+    "testcafe-blink-diff": "^0.4.4"
   }
 }
